@@ -6,7 +6,7 @@ model=joblib.load("polynomialRegression_ElectricBill_AC_Fan.pkl")
 st.title("Electricity Bill Prediction Based On AC Units")
 
 ac_units=st.number_input("Enter AC Units : ", min_value=0.0, value=100.0)
-fan_units=st.number_input("Enter Fan Units :, min_value=0.0, value=100.0)
+fan_units=st.number_input("Enter Fan Units : ", min_value=0.0, value=100.0)
 if st.button("Predict"):
   poly=PolynomialFeatures()
   ac_fan_units_poly=poly.fit_transform([[ac_units,fan_units]])
